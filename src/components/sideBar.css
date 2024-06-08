@@ -1,0 +1,40 @@
+aside{
+    width: 90px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+aside > nav{
+    width: 100%;
+}
+
+aside nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+aside nav ul li{
+    width: 100%;
+}
+
+aside nav ul li button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background: none;
+}
+
+li button:hover{
+    background: rgb(183, 183, 183);
+}

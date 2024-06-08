@@ -1,0 +1,79 @@
+.cardapio{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardapio .btns{
+    width: 80%;
+    display: flex;
+    margin-top: 150px;
+    border-bottom: 1px solid black;
+}
+
+.btns button{
+    width: 33.33%;
+    height: 50px;
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    transition: .2s;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #b8b8b8;
+}
+
+.cardapio .selectors{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectors .pratosPrincipais, .bebidas, .outros{
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 80%;
+    height: auto;
+}
+
+.bebidas{
+    background: blue;
+}
+
+.outros{
+    background: green;
+}
+
+.item{
+    display: flex;
+    gap: 1em;
+}
+
+.item .item-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.item-desc h3{
+    font-size: 2em;
+    color: red;
+    font-weight: 600;
+    padding: 0px 0px;
+}
+
+.item-desc p{
+    font-size: 1.2em;
+    max-width: 400px;
+}
+
+.item .item-image img{
+    border-radius: 10px;
+}

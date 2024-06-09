@@ -1,17 +1,5 @@
-.cardapio{
-    width: 90vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
 
-.cardapio > h2{
-    font-size: 2.5em;
-    margin: 20px 0px;
-    color: red;
-    text-transform: uppercase;
-}
+
 
 .cardapio .btns{
     width: 80%;

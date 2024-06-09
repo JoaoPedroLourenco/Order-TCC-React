@@ -2,8 +2,10 @@ import React from "react";
 
 const Renda = () => {
   return (
-    <div>
-      <h2>Renda</h2>
+    <div className="container renda">
+      <div className="title">
+        <h1>Renda</h1>
+      </div>
     </div>
   );
 };

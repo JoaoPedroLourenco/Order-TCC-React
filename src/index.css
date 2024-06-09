@@ -13,3 +13,18 @@ body{
     display: flex;
     background: #fff0d5;
 }
+
+.title h1{
+    color: red;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+.container{
+    width: 95vw;
+    height: 100vh;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

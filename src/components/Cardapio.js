@@ -10,8 +10,10 @@ const Cardapio = () => {
   };
 
   return (
-    <div className="cardapio">
-      <h2>Cardápio</h2>
+    <div className="container cardapio">
+      <div className="title">
+        <h1>Cardápio</h1>
+      </div>
       {/* <div className="sections-btn">
         <button onClick={sectionPratos}>Pratos principais</button>
         <button onClick={sectionBebidas}>Bebidas</button>

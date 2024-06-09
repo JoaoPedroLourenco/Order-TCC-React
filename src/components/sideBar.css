@@ -5,7 +5,9 @@ aside{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     padding: 20px 0px;
+    border-right: 1px solid rgba(255, 0, 0, 0.129);
 }
 
 aside > nav{
@@ -31,7 +33,6 @@ aside nav ul li button{
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 10px;
     background: none;
 }
 

@@ -3,7 +3,7 @@ import "./Cardapio.css";
 import { useState } from "react";
 
 const Cardapio = () => {
-  const [activeDiv, setActiveDiv] = useState(null);
+  const [activeDiv, setActiveDiv] = useState(1);
 
   const handleClick = (divNumber) => {
     setActiveDiv(divNumber);
@@ -41,9 +41,56 @@ const Cardapio = () => {
                 </h2>
               </div>
             </div>
+
+            <div className="item">
+              <div className="item-image">
+                <img src="https://placeholder.com/180" alt="" />
+              </div>
+              <div className="item-desc">
+                <h3>X-Quase Tudo</h3>
+                <p>
+                  2 Hamburgueres, Maionese, Queijo, Tomate, Alface, Salsicha.
+                </p>
+                <h2>
+                  <span style={{ color: "red" }}>R$ </span>
+                  15,00
+                </h2>
+              </div>
+            </div>
+
+            <div className="item">
+              <div className="item-image">
+                <img src="https://placeholder.com/180" alt="" />
+              </div>
+              <div className="item-desc">
+                <h3>X-Quase Tudo</h3>
+                <p>
+                  2 Hamburgueres, Maionese, Queijo, Tomate, Alface, Salsicha.
+                </p>
+                <h2>
+                  <span style={{ color: "red" }}>R$ </span>
+                  15,00
+                </h2>
+              </div>
+            </div>
           </div>
         )}
-        {activeDiv === 2 && <div className="bebidas">Div 2</div>}
+        {activeDiv === 2 && (
+          <div className="bebidas">
+            <div className="item-bebidas">
+              <div className="item-image-bebidas">
+                <img src="https://placeholder.com/180" alt="" />
+              </div>
+              <div className="item-desc-bebidas">
+                <h3>Coca-Cola 2L</h3>
+                <h2>
+                  <span style={{ color: "red" }}>R$ </span>
+                  9,90
+                </h2>
+              </div>
+            </div>
+          </div>
+        )}
         {activeDiv === 3 && <div className="outros">Div 3</div>}
       </div>
     </div>

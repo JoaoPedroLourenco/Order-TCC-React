@@ -44,7 +44,12 @@ aside nav ul li button{
 
 li button:hover{
     transition: .1s;
-    background: #b7b7b7;
+    background: #b7b7b795;
+}
+
+li button:focus{
+    background: #b7b7b795;
+    outline: 2px solid red;
 }
 
 li > button > img{

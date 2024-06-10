@@ -14,15 +14,25 @@ const Cardapio = () => {
       <div className="title">
         <h1>Cardápio</h1>
       </div>
-      {/* <div className="sections-btn">
-        <button onClick={sectionPratos}>Pratos principais</button>
-        <button onClick={sectionBebidas}>Bebidas</button>
-        <button onClick={sectionOutros}>Outros</button>
-      </div> */}
       <div className="btns">
-        <button onClick={() => handleClick(1)}>Pratos Principais</button>
-        <button onClick={() => handleClick(2)}>Bebidas</button>
-        <button onClick={() => handleClick(3)}>Outros</button>
+        <button
+          className={activeDiv === 1 ? "active" : ""}
+          onClick={() => handleClick(1)}
+        >
+          Pratos Principais
+        </button>
+        <button
+          className={activeDiv === 2 ? "active" : ""}
+          onClick={() => handleClick(2)}
+        >
+          Bebidas
+        </button>
+        <button
+          className={activeDiv === 3 ? "active" : ""}
+          onClick={() => handleClick(3)}
+        >
+          Outros
+        </button>
       </div>
 
       <div className="selectors">

@@ -21,8 +21,16 @@
     cursor: pointer;
 }
 
+.btns > #btn1{
+    background: #b8b8b898;
+}
+
 button:hover{
-    background: #b8b8b8;
+    background: #b8b8b898;
+}
+
+button:focus{
+    background: #b8b8b898;
 }
 
 .cardapio .selectors{
@@ -42,7 +50,6 @@ button:hover{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 
 .item{
     width: 680px;
@@ -105,3 +112,22 @@ button:hover{
 .item-image-bebidas img{
     border-radius: 10px;
 }
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+   
+  }
+  
+  button.active {
+    background-color: #b8b8b898;
+    border: 1px solid rgba(255, 0, 0, 0.335);
+  }
+
+  button.active:first-child{
+    border-top-left-radius: 10px;
+  }
+
+  button.active:last-child{
+    border-top-right-radius: 10px;
+  }

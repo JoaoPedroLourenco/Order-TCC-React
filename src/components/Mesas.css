@@ -1,6 +1,10 @@
-.btn-mesas button{
+.mesas{
+    margin-left: -20px;
+}
+
+.container button{
     width: 200px;
-    height: 35px;
+    height: 40px;
     border: none;
     background: red;
     color: white;
@@ -10,8 +14,8 @@
     cursor: pointer;
     margin-top: 10px;
 }
-
-.btn-mesas button:hover{
+ 
+.container button:hover{
     background: rgb(192, 0, 0);
     transition: .1s;
 }

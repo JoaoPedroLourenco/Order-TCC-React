@@ -12,6 +12,7 @@ body{
     height: auto;
     display: flex;
     background: #fff0d5;
+    overflow-x: hidden;
 }
 
 .title h1{

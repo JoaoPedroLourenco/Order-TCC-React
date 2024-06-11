@@ -10,7 +10,7 @@ const Mesas = () => {
         <h1>Mesas</h1>
       </div>
 
-      <button onClick={() => navigateTo("editMesas")}>Editar Mesas</button>
+      <button className="goToEditMesas" onClick={() => navigateTo("editMesas")}>Editar Mesas</button>
     </div>
   );
 

@@ -2,7 +2,7 @@
     margin-left: -20px;
 }
 
-.container button{
+.container .goToEditMesas{
     width: 200px;
     height: 40px;
     border: none;
@@ -15,7 +15,7 @@
     margin-top: 10px;
 }
  
-.container button:hover{
+.container .goToEditMesas:hover{
     background: rgb(192, 0, 0);
     transition: .1s;
 }

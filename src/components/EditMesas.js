@@ -1,43 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./EditMesas.css";
-import { useState } from "react";
 import downArrow from "../assets/imgs/downArrow.png";
 
 const EditMesas = ({ navigateTo }) => {
-  const [tamanhoCard, setTamanhoCard] = useState(false);
+  const [expandedCards, setExpandedCards] = useState({
+    doisLugares: false,
+    quatroLugares: false,
+    seisLugares: false,
+    dezLugares: false,
+  });
 
-  const aumentarCard = () => {
-    setTamanhoCard(!tamanhoCard);
+  const toggleCard = (card) => {
+    setExpandedCards((prevState) => ({
+      ...prevState,
+      [card]: !prevState[card],
+    }));
   };
 
   return (
     <div className="container editMesas">
-      <div className="title">
-        <h1>Editar Mesas</h1>
-      </div>
+      <div className="explicatorio">
+        <div className="title">
+          <h1>Editar Mesas</h1>
+        </div>
 
-      <p>Esta é a página de edição de mesas.</p>
-      <button onClick={() => navigateTo("home")}>Voltar para Home</button>
+        <p>Esta é a página de edição de mesas.</p>
+        <button className="backToMesas" onClick={() => navigateTo("home")}>
+          Voltar para Mesas
+        </button>
+      </div>
 
       <div className="sectionsContainer">
         <div
           className="doisLugares card"
-          onClick={aumentarCard}
+          onClick={() => toggleCard("doisLugares")}
           style={{
-            height: tamanhoCard ? "500px" : "30px",
+            height: expandedCards.doisLugares ? "500px" : "30px",
           }}
         >
           <div className="lugaresTitle">
             <h2>2 Lugares</h2>
             <p>
               <img src={downArrow} alt="↓" />
-              {tamanhoCard}
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: tamanhoCard ? "1" : "0", transition: ".6s" }}
+              style={{ opacity: expandedCards.doisLugares ? "1" : "0", transition: ".1s" }}
             >
               +
             </div>
@@ -45,23 +55,22 @@ const EditMesas = ({ navigateTo }) => {
         </div>
 
         <div
-          className="doisLugares card"
-          onClick={aumentarCard}
+          className="quatroLugares card"
+          onClick={() => toggleCard("quatroLugares")}
           style={{
-            height: tamanhoCard ? "500px" : "30px",
+            height: expandedCards.quatroLugares ? "500px" : "30px",
           }}
         >
           <div className="lugaresTitle">
             <h2>4 Lugares</h2>
             <p>
               <img src={downArrow} alt="↓" />
-              {tamanhoCard}
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: tamanhoCard ? "1" : "0", transition: ".6s" }}
+              style={{ opacity: expandedCards.quatroLugares ? "1" : "0", transition: ".1s" }}
             >
               +
             </div>
@@ -69,23 +78,22 @@ const EditMesas = ({ navigateTo }) => {
         </div>
 
         <div
-          className="doisLugares card"
-          onClick={aumentarCard}
+          className="seisLugares card"
+          onClick={() => toggleCard("seisLugares")}
           style={{
-            height: tamanhoCard ? "500px" : "30px",
+            height: expandedCards.seisLugares ? "500px" : "30px",
           }}
         >
           <div className="lugaresTitle">
             <h2>6 Lugares</h2>
             <p>
               <img src={downArrow} alt="↓" />
-              {tamanhoCard}
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: tamanhoCard ? "1" : "0", transition: ".6s" }}
+              style={{ opacity: expandedCards.seisLugares ? "1" : "0", transition: ".1s" }}
             >
               +
             </div>
@@ -93,23 +101,22 @@ const EditMesas = ({ navigateTo }) => {
         </div>
 
         <div
-          className="doisLugares card"
-          onClick={aumentarCard}
+          className="dezLugares card"
+          onClick={() => toggleCard("dezLugares")}
           style={{
-            height: tamanhoCard ? "500px" : "30px",
+            height: expandedCards.dezLugares ? "500px" : "30px",
           }}
         >
           <div className="lugaresTitle">
             <h2>10 Lugares</h2>
             <p>
               <img src={downArrow} alt="↓" />
-              {tamanhoCard}
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: tamanhoCard ? "1" : "0", transition: ".6s" }}
+              style={{ opacity: expandedCards.dezLugares ? "1" : "0", transition: ".1s" }}
             >
               +
             </div>

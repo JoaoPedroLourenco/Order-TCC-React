@@ -35,19 +35,29 @@ const EditMesas = ({ navigateTo }) => {
           className="doisLugares card"
           onClick={() => toggleCard("doisLugares")}
           style={{
-            height: expandedCards.doisLugares ? "500px" : "30px",
+            height: expandedCards.doisLugares ? "30px" : "500px",
           }}
         >
           <div className="lugaresTitle">
             <h2>2 Lugares</h2>
             <p>
-              <img src={downArrow} alt="↓" />
+              <img
+                src={downArrow}
+                alt="↓"
+                style={{
+                  rotate: expandedCards.doisLugares ? "0deg" : "180deg",
+                  transition: ".5s",
+                }}
+              />
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: expandedCards.doisLugares ? "1" : "0", transition: ".1s" }}
+              style={{
+                opacity: expandedCards.doisLugares ? "0" : "1",
+                transition: ".1s",
+              }}
             >
               +
             </div>
@@ -58,19 +68,29 @@ const EditMesas = ({ navigateTo }) => {
           className="quatroLugares card"
           onClick={() => toggleCard("quatroLugares")}
           style={{
-            height: expandedCards.quatroLugares ? "500px" : "30px",
+            height: expandedCards.quatroLugares ? "30px" : "500px",
           }}
         >
           <div className="lugaresTitle">
             <h2>4 Lugares</h2>
             <p>
-              <img src={downArrow} alt="↓" />
+              <img
+                src={downArrow}
+                alt="↓"
+                style={{
+                  rotate: expandedCards.quatroLugares ? "0deg" : "180deg",
+                  transition: ".5s",
+                }}
+              />
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: expandedCards.quatroLugares ? "1" : "0", transition: ".1s" }}
+              style={{
+                opacity: expandedCards.quatroLugares ? "0" : "1",
+                transition: ".1s",
+              }}
             >
               +
             </div>
@@ -81,19 +101,29 @@ const EditMesas = ({ navigateTo }) => {
           className="seisLugares card"
           onClick={() => toggleCard("seisLugares")}
           style={{
-            height: expandedCards.seisLugares ? "500px" : "30px",
+            height: expandedCards.seisLugares ? "30px" : "500px",
           }}
         >
           <div className="lugaresTitle">
             <h2>6 Lugares</h2>
             <p>
-              <img src={downArrow} alt="↓" />
+              <img
+                src={downArrow}
+                alt="↓"
+                style={{
+                  rotate: expandedCards.seisLugares ? "0deg" : "180deg",
+                  transition: ".5s",
+                }}
+              />
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: expandedCards.seisLugares ? "1" : "0", transition: ".1s" }}
+              style={{
+                opacity: expandedCards.seisLugares ? "0" : "1",
+                transition: ".1s",
+              }}
             >
               +
             </div>
@@ -104,19 +134,29 @@ const EditMesas = ({ navigateTo }) => {
           className="dezLugares card"
           onClick={() => toggleCard("dezLugares")}
           style={{
-            height: expandedCards.dezLugares ? "500px" : "30px",
+            height: expandedCards.dezLugares ? "30px" : "500px",
           }}
         >
           <div className="lugaresTitle">
             <h2>10 Lugares</h2>
             <p>
-              <img src={downArrow} alt="↓" />
+              <img
+                src={downArrow}
+                alt="↓"
+                style={{
+                  rotate: expandedCards.dezLugares ? "0deg" : "180deg",
+                  transition: ".5s",
+                }}
+              />
             </p>
           </div>
           <div className="addBtn">
             <div
               className="middleBtn"
-              style={{ opacity: expandedCards.dezLugares ? "1" : "0", transition: ".1s" }}
+              style={{
+                opacity: expandedCards.dezLugares ? "0" : "1",
+                transition: ".1s",
+              }}
             >
               +
             </div>

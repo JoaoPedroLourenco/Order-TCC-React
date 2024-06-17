@@ -11,15 +11,25 @@ import renda from "../assets/imgs/Money Bag.png";
 import configuracoes from "../assets/imgs/Settings.png";
 import ajuda from "../assets/imgs/Help.png";
 
-const sideBar = ({ mesasPage, cardapioPage, estoquePage, rendaPage }) => {
+const sideBar = ({
+  mesasPage,
+  cardapioPage,
+  estoquePage,
+  rendaPage,
+  settingsPage,
+  helpPage,
+  perfilPage,
+}) => {
   return (
     <div className="sideBarContainer">
       <div className="logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Order" />
       </div>
       <aside>
         <div className="profile">
-          <img src={perfil} alt="Profile" />
+          <button onClick={perfilPage}>
+            <img src={perfil} alt="Profile" />
+          </button>
         </div>
         <hr />
         <nav>
@@ -52,11 +62,11 @@ const sideBar = ({ mesasPage, cardapioPage, estoquePage, rendaPage }) => {
         </nav>
         <hr />
         <div className="settings help">
-          <button>
+          <button onClick={settingsPage}>
             <img src={configuracoes} alt="Settings" />
             Configurações
           </button>
-          <button>
+          <button onClick={helpPage}>
             <img src={ajuda} alt="Help" />
             Ajuda
           </button>

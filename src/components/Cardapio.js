@@ -2,6 +2,14 @@ import React from "react";
 import "./Cardapio.css";
 import { useState } from "react";
 
+const ProdutoCard = ({ nomeProduto, descProduto, precoProduto }) => (
+  <div className="produto-card">
+    <h3>{nomeProduto}</h3>
+    <p>{descProduto}</p>
+    <p>Preço: {precoProduto}</p>
+  </div>
+);
+
 const Cardapio = () => {
   const [activeDiv, setActiveDiv] = useState(1);
 
@@ -9,11 +17,62 @@ const Cardapio = () => {
     setActiveDiv(divNumber);
   };
 
+  const [produtoCadastrado, setProdutoCadastrado] = useState([]);
+
+  const [nomeProduto, setNomeProduto] = useState("");
+  const [descProduto, setDescProduto] = useState("");
+  const [precoProduto, setPrecoProduto] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // para não perder dados atualizando a pagina qnd tiver o submit
+
+    setProdutoCadastrado([
+      ...produtoCadastrado,
+      { nomeProduto, descProduto, precoProduto },
+    ]);
+
+    setNomeProduto("");
+    setDescProduto("");
+    setPrecoProduto("");
+  };
+
   return (
     <div className="container cardapio">
       <div className="title">
         <h1>Cardápio</h1>
       </div>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="nomeProduto"
+          id="nomeProduto"
+          placeholder="Nome do produto"
+          value={nomeProduto}
+          onChange={(e) => setNomeProduto(e.target.value)}
+        />
+
+        <input
+          type="text"
+          name="descProduto"
+          id="descProduto"
+          placeholder="Descrição do produto"
+          value={descProduto}
+          onChange={(e) => setDescProduto(e.target.value)}
+        />
+
+        <input
+          type="number"
+          name="precoProduto"
+          id="precoProduto"
+          placeholder="Preço do produto"
+          value={precoProduto}
+          onChange={(e) => setPrecoProduto(e.target.value)}
+        />
+
+        <input type="submit" value="Confirmar" />
+      </form>
+
       <div className="btns">
         <button
           className={activeDiv === 1 ? "active" : ""}
@@ -38,71 +97,21 @@ const Cardapio = () => {
       <div className="selectors">
         {activeDiv === 1 && (
           <div className="pratosPrincipais">
-            <div className="item">
-              <div className="item-image">
-                <img src="https://placeholder.com/180" alt="" />
-              </div>
-              <div className="item-desc">
-                <h3>X-Quase Tudo</h3>
-                <p>
-                  2 Hamburgueres, Maionese, Queijo, Tomate, Alface, Salsicha.
-                </p>
-                <h2>
-                  <span style={{ color: "red" }}>R$ </span>
-                  15,00
-                </h2>
-              </div>
-            </div>
-
-            <div className="item">
-              <div className="item-image">
-                <img src="https://placeholder.com/180" alt="" />
-              </div>
-              <div className="item-desc">
-                <h3>X-Quase Tudo</h3>
-                <p>
-                  2 Hamburgueres, Maionese, Queijo, Tomate, Alface, Salsicha.
-                </p>
-                <h2>
-                  <span style={{ color: "red" }}>R$ </span>
-                  15,00
-                </h2>
-              </div>
-            </div>
-
-            <div className="item">
-              <div className="item-image">
-                <img src="https://placeholder.com/180" alt="" />
-              </div>
-              <div className="item-desc">
-                <h3>X-Quase Tudo</h3>
-                <p>
-                  2 Hamburgueres, Maionese, Queijo, Tomate, Alface, Salsicha.
-                </p>
-                <h2>
-                  <span style={{ color: "red" }}>R$ </span>
-                  15,00
-                </h2>
-              </div>
+            <div className="cardsProdutos">
+              <ul>
+                {produtoCadastrado.map((produto, index) => (
+                  <ProdutoCard
+                    key={index}
+                    nomeProduto={produto.nomeProduto}
+                    descProduto={produto.descProduto}
+                    precoProduto={produto.precoProduto}
+                  />
+                ))}
+              </ul>
             </div>
           </div>
         )}
-        {activeDiv === 2 && (
-          <div className="bebidas">
-            <div className="item-bebidas">
-              <div className="item-image-bebidas">
-                <img src="https://placeholder.com/180" alt="" />
-              </div>
-              <div className="item-desc-bebidas">
-                <h3>Coca-Cola 2L</h3>
-                <h2>
-                  <span style={{ color: "red" }}>R$ </span>
-                  9,90
-                </h2>
-              </div>
-            </div>
-          </div>
-        )}
+        {activeDiv === 2 && <div className="bebidas"></div>}
         {activeDiv === 3 && <div className="outros">Div 3</div>}
       </div>
     </div>

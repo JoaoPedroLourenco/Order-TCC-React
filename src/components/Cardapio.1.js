@@ -1,18 +1,8 @@
 import React from "react";
-import "./Cardapio.css";
 import { useState, useEffect } from "react";
+import { dataBaseURL, ProdutoCard } from "./Cardapio";
 
-const ProdutoCard = ({ nomeProduto, descProduto, precoProduto }) => (
-  <div className="produto-card">
-    <h3>{nomeProduto}</h3>
-    <p>{descProduto}</p>
-    <p>Preço: {precoProduto}</p>
-  </div>
-);
-
-const dataBaseURL = "http://localhost:3000/produtos";
-
-const Cardapio = () => {
+export const Cardapio = () => {
   const [activeDiv, setActiveDiv] = useState(1);
 
   const handleClick = (divNumber) => {
@@ -38,9 +28,9 @@ const Cardapio = () => {
     e.preventDefault(); // para não perder dados atualizando a pagina qnd tiver o submit
 
     const produtos = {
-      nomeProduto,
-      descProduto,
-      precoProduto,
+      nome,
+      descricao, // valor tem o mesmo nome da chave, por isso apenas "name"
+      preco,
     };
 
     const res = await fetch(dataBaseURL, {
@@ -55,10 +45,6 @@ const Cardapio = () => {
     const addedProduct = await res.json();
 
     setProdutoCadastrado((prevProducts) => [...prevProducts, addedProduct]);
-
-    setNomeProduto("");
-    setDescProduto("");
-    setPrecoProduto("");
   };
 
   return (
@@ -142,5 +128,3 @@ const Cardapio = () => {
     </div>
   );
 };
-
-export default Cardapio;

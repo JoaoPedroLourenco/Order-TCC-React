@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "X-Burguer",
+      "descricao": "Salada, hmaburguer",
+      "preco": 23
+    },
+    {
+      "id": "1be8",
+      "nomeProduto": "dsa",
+      "descProduto": "dsad",
+      "precoProduto": "12"
+    },
+    {
+      "id": "0d65",
+      "nomeProduto": "X-Burguer ",
+      "descProduto": "salada, tomate, hamburghuert",
+      "precoProduto": "10.50"
+    }
+  ]
+}

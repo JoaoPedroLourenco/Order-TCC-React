@@ -1,22 +1,43 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "X-Burguer",
-      "descricao": "Salada, hmaburguer",
-      "preco": 23
+      "id": "2a92",
+      "nomeProduto": "yudfsgaygd",
+      "descProduto": "uidhasuid",
+      "precoProduto": "23"
     },
     {
-      "id": "1be8",
-      "nomeProduto": "dsa",
-      "descProduto": "dsad",
+      "id": "52d2",
+      "nomeProduto": "dsads",
+      "descProduto": "dsa",
       "precoProduto": "12"
+    }
+  ],
+  "estoque": [
+    {
+      "id": "5659",
+      "nomeItem": "ds",
+      "qtdItem": "12"
     },
     {
-      "id": "0d65",
-      "nomeProduto": "X-Burguer ",
-      "descProduto": "salada, tomate, hamburghuert",
-      "precoProduto": "10.50"
+      "id": "62ac",
+      "nomeItem": "ds",
+      "qtdItem": "1234"
+    },
+    {
+      "id": "7da3",
+      "nomeItem": "dsadsadsadsadsadsadsad",
+      "qtdItem": ""
+    },
+    {
+      "id": "22a1",
+      "nomeItem": "dsadsad",
+      "qtdItem": "123132132"
+    },
+    {
+      "id": "86d0",
+      "nomeItem": "dsadsadsadsadsadsadsda",
+      "qtdItem": "1231232132132"
     }
   ]
 }

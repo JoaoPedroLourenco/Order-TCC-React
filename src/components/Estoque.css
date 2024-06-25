@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 .estoqueCadastroItem form{
     width: 100%;
     height: auto;
@@ -15,7 +15,7 @@
     flex-direction: column;
     gap: 1em;
 }
-
+ 
 form input{
     width: 30%;
     height: 40px;
@@ -25,7 +25,7 @@ form input{
     padding: 5px;
     font-size: 1.2em;
 }
-
+ 
 form input[type=submit]{
     width: 20%;
     background: red;
@@ -33,7 +33,166 @@ form input[type=submit]{
     transition: .1s;
     cursor: pointer;
 }
-
+ 
 form input[type=submit]:hover{
     background: darkred;
+}
+ 
+.btns{
+    width: 80%;
+    display: flex;
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+ 
+.btns button{
+    width: 33.33%;
+    height: 50px;
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    transition: .2s;
+    cursor: pointer;
+}
+ 
+ 
+button:hover{
+    background: #b8b8b898;
+}
+ 
+button:focus{
+    background: #b8b8b898;
+}
+ 
+.cardapio .selectors{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.selectors, .pratosPrincipais, .bebidas, .outros{
+   
+    padding-top: 20px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.item{
+    width: 680px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    transition: .2s;
+    margin-bottom: 1em;
+}
+ 
+.item:hover{
+    transition: .2s;
+    background: #d8d8d8;
+}
+ 
+.item .item-desc{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+ 
+.item-desc h3{
+    font-size: 2em;
+    color: red;
+    font-weight: 600;
+    padding: 0px 0px;
+}
+ 
+.item-desc p{
+    font-size: 1.2em;
+    max-width: 400px;
+}
+ 
+.item .item-image img{
+    border-radius: 10px;
+}
+ 
+.item-bebidas{
+    display: flex;
+    padding: 10px;
+    gap: 1em;
+}
+ 
+.item-desc-bebidas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 9px;
+}
+ 
+.item-desc-bebidas h3{
+    font-size: 2em;
+    color: red;
+    font-weight: 600;
+}
+ 
+.item-image-bebidas img{
+    border-radius: 10px;
+}
+ 
+button {
+    background-color: transparent;
+    cursor: pointer;
+   
+  }
+ 
+button.active {
+background-color: #b8b8b898;
+border: 1px solid rgba(255, 0, 0, 0.335);
+}
+ 
+button.active:first-child{
+border-top-left-radius: 10px;
+}
+ 
+button.active:last-child{
+border-top-right-radius: 10px;
+}
+ 
+.item-estoque{
+    width: 350px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+ 
+.item-estoque > p{
+    border: 1px solid red;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    border-radius: 10px;
+}
+
+.item-estoque > h2{
+    font-size: 1.5em;
+    max-width: 270px;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+    font-weight: normal;
 }

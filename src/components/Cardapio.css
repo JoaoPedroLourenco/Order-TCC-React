@@ -5,7 +5,7 @@
     align-items: center;
  
 }
-
+ 
 .cardapio .btns{
     width: 80%;
     display: flex;
@@ -15,7 +15,7 @@
     border-top-right-radius: 10px;
     overflow: hidden;
 }
-
+ 
 .btns button{
     width: 33.33%;
     height: 50px;
@@ -25,16 +25,16 @@
     transition: .2s;
     cursor: pointer;
 }
-
-
+ 
+ 
 button:hover{
     background: #b8b8b898;
 }
-
+ 
 button:focus{
     background: #b8b8b898;
 }
-
+ 
 .cardapio .selectors{
     width: 100%;
     height: auto;
@@ -42,7 +42,7 @@ button:focus{
     align-items: center;
     justify-content: center;
 }
-
+ 
 .selectors, .pratosPrincipais, .bebidas, .outros{
    
     padding-top: 20px;
@@ -53,7 +53,7 @@ button:focus{
     align-items: center;
     flex-wrap: wrap;
 }
-
+ 
 .item{
     width: 680px;
     height: auto;
@@ -65,76 +65,76 @@ button:focus{
     transition: .2s;
     margin-bottom: 1em;
 }
-
+ 
 .item:hover{
     transition: .2s;
     background: #d8d8d8;
 }
-
+ 
 .item .item-desc{
     display: flex;
     gap: 1em;
     flex-direction: column;
 }
-
+ 
 .item-desc h3{
     font-size: 2em;
     color: red;
     font-weight: 600;
     padding: 0px 0px;
 }
-
+ 
 .item-desc p{
     font-size: 1.2em;
     max-width: 400px;
 }
-
+ 
 .item .item-image img{
     border-radius: 10px;
 }
-
+ 
 .item-bebidas{
     display: flex;
     padding: 10px;
     gap: 1em;
 }
-
+ 
 .item-desc-bebidas{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 9px;
 }
-
+ 
 .item-desc-bebidas h3{
     font-size: 2em;
     color: red;
     font-weight: 600;
 }
-
+ 
 .item-image-bebidas img{
     border-radius: 10px;
 }
-
+ 
 button {
     background-color: transparent;
     cursor: pointer;
    
   }
-  
+ 
 button.active {
 background-color: #b8b8b898;
 border: 1px solid rgba(255, 0, 0, 0.335);
 }
-
+ 
 button.active:first-child{
 border-top-left-radius: 10px;
 }
-
+ 
 button.active:last-child{
 border-top-right-radius: 10px;
 }
-
+ 
 .cardapio > form{
     width: 100%;
     display: flex;
@@ -143,7 +143,7 @@ border-top-right-radius: 10px;
     flex-direction: column;
     gap: 1em;
 }
-
+ 
 .produto-card{
     width: 400px;
     height: 150px;
@@ -154,22 +154,22 @@ border-top-right-radius: 10px;
     justify-content: center;
     padding: 10px;
 }
-
+ 
 .pratosPrincipais{
     padding: 10px;
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+ 
 .pratosPrincipais > .cardsProdutos{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+ 
 .pratosPrincipais > .cardsProdutos > ul{
     width: 100%;
     height: auto;
